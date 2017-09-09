@@ -1,7 +1,13 @@
 class UserController < ApplicationController
-  def email:string
+  def index
   end
 
-  def password:string
+  def show
+  end
+
+  def edit
+  end
+
+  def new
   end
 end
