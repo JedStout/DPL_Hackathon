@@ -11,5 +11,8 @@ class BiosController < ApplicationController
     @bio = Bio.new
    end
 
-  # make this work
+  def edit
+    @bio = Bio.find(params[:id])
+   end
+  # make this work!
 end
