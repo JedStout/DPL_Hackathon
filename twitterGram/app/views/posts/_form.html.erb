@@ -1,11 +1,10 @@
-def new
-    @post = post.new
-    render partial: "form"
-  end
-  
-  def edit
-    render partial: "form"
-  end
-  
-  #NOTE if the file was in a different folder we need to specify
-  # render 'topics/form'
+<h1><%= @post.id ?  "Edit #{@post.name}" : 'Create A post' %></h1>
+<hr />
+<%= form_for @post do |f| %>
+
+  <br />
+  <%= f.label :content %>
+  <%= f.text_field :content, required: true %>
+  <br />
+  <%= f.submit %>
+<% end %>

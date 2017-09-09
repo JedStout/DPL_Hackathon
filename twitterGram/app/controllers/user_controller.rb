@@ -1,5 +1,8 @@
 class UserController < ApplicationController
+
+  
   def index
+    @posts = current_user.posts
   end
 
   def show
@@ -9,5 +12,6 @@ class UserController < ApplicationController
   end
 
   def new
+
   end
 end

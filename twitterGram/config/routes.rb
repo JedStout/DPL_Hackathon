@@ -16,8 +16,16 @@ Rails.application.routes.draw do
         resources :posts
       end
 
+      resources :users do
+        resources :comments
+      end
+
       scope 'posts/:post_id', as: 'post' do
         resources :comments, only: [:new, :create]
+      end
+
+      scope "/:user_id" do
+        resources :posts
       end
 
       resources :users do

@@ -1,6 +1,10 @@
 <h1>User</h1>
 <hr />
 
-<%= link_to 'Create A New Post', new_user_post %>
+<%= link_to 'Create A New Post', new_user_post_path(current_user) %>
 <ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.name, list %></li>
+  <% end %>
 </ul>
+
