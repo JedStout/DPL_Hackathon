@@ -1,0 +1,11 @@
+def new
+    @post = post.new
+    render partial: "form"
+  end
+  
+  def edit
+    render partial: "form"
+  end
+  
+  #NOTE if the file was in a different folder we need to specify
+  # render 'topics/form'
